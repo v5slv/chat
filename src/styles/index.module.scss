@@ -1,0 +1,27 @@
+.page {
+    display: flex;
+    gap: 2em;
+    width: 80vw;
+
+    .chat {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+    }
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.error {
+    color: rgb(155, 7, 7);
+}

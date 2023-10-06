@@ -1,0 +1,17 @@
+.notification {
+    background-color: rgb(148, 205, 255);
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1em;
+
+    .close {
+        width: 12px;
+        height: 12px;
+        background-color: black;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

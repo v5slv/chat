@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Old London";
+    src: url(/fonts/OldLondon.woff) format("woff");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+body {
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+}
+
+input {
+    background-color: white;
+    border: none;
+    outline: transparent;
+    border: 2px solid black;
+    box-shadow: 0.25em 0.25em black;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0.5em;
+}
