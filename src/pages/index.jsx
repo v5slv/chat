@@ -192,14 +192,14 @@ const Home = () => {
         };
     }, []);
 
-    // à chaque fois qu'il y a un changement dans messages, ça va trigger le useEffect
+    // à chaque fois qu'il y a un changement dans messages ou l'util sélectionné, ça va trigger le useEffect qui trigger le scroll to bottom
     useEffect(() => {
         scrollToBottom();
     }, [messages, selectedUser]);
 
-    useEffect(() => {
-        console.log(selectedUser);
-    }, [selectedUser]);
+    // useEffect(() => {
+    //     console.log(selectedUser);
+    // }, [selectedUser]);
 
     return (
         <div className={s.page}>

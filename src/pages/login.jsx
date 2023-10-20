@@ -44,11 +44,12 @@ const Login = () => {
     return (
         <div>
             <h1 className={`${getClassname()}`}>Login</h1>
-            <p>enter username</p>
+            <p>who are u?!</p>
+            <img src="/img/tea.gif" alt="" />
             <input
                 ref={inputRef}
                 type="text"
-                placeholder="aefjaoefh"
+                placeholder="tutututu"
                 onKeyDown={onKeyDown}
             />
             {displayError()}

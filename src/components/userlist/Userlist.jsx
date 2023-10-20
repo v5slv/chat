@@ -31,10 +31,9 @@ const UserList = ({ users, setUsers, selectedUser, setSelectedUser }) => {
                 <span className={s.general}>General</span>
             </div>
 
-            {users.map((user, index) => {
+            {users.map((user) => {
                 return user.connected === true ? (
                     <User
-                        index={index}
                         key={user.userID}
                         user={user}
                         selectedUser={selectedUser}
