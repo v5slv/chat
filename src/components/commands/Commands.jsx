@@ -7,7 +7,8 @@ const Commands = () => {
 
     useEffect(() => {
         setSounds({
-            boom: new Audio("/sounds/boom.mp3"),
+            meow: new Audio("/sounds/meow.mp3"),
+            piano: new Audio("/sounds/piano.mp3"),
             chef: new Audio("/sounds/chef.mp3"),
         });
     }, []);
@@ -18,6 +19,16 @@ const Commands = () => {
                 case "/chef":
                     sounds.chef.currentTime = 0;
                     sounds.chef.play();
+                    break;
+
+                case "/meow":
+                    sounds.meow.currentTime = 0;
+                    sounds.meow.play();
+                    break;
+
+                case "/yes!":
+                    sounds.piano.currentTime = 0;
+                    sounds.piano.play();
                     break;
 
                 default:
@@ -32,7 +43,7 @@ const Commands = () => {
         };
     }, [sounds]);
 
-    return <div></div>;
+    return <div className={s.commands}></div>;
 };
 
 export default Commands;

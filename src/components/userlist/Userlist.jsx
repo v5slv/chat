@@ -28,7 +28,7 @@ const UserList = ({ users, setUsers, selectedUser, setSelectedUser }) => {
                 className={`${s.user} ${selectedUser ? "" : s.user__active}`}
                 onClick={() => setSelectedUser(null)}
             >
-                <span className={s.general}>General</span>
+                <span className={s.general}> &gt; General</span>
             </div>
 
             {users.map((user) => {

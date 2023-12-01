@@ -1,0 +1,22 @@
+@import "utils.scss";
+
+.login {
+    background-color: $beige;
+    @include flex(column, 1em);
+    @include border(1em);
+    @include shadow;
+    padding: 2em;
+}
+
+.intro {
+    @include flex(row, 1em, space-between, baseline);
+    width: 100%;
+
+    h1 {
+        text-transform: uppercase;
+    }
+}
+
+.img {
+    @include border;
+}

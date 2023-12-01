@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
 import { useRef, useEffect, useState } from "react";
-import s from "@/styles/index.module.scss";
+import s from "@/styles/login.module.scss";
 
 const Login = () => {
     const inputRef = useRef();
     const [error, setError] = useState("");
     const { push } = useRouter();
-
-    console.log(inputRef);
 
     const onKeyDown = (e) => {
         if (e.keyCode === 13) {
@@ -28,7 +26,8 @@ const Login = () => {
 
     const displayError = () => {
         if (error !== "") {
-            return <h2>error</h2>;
+            console.log("! error : ", error);
+            return <div className={s.error}>error</div>;
         }
     };
 
@@ -42,16 +41,21 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h1 className={`${getClassname()}`}>Login</h1>
-            <p>who are u?!</p>
-            <img src="/img/tea.gif" alt="" />
+        <div className={s.login}>
+            <div className={s.intro}>
+                <h1 className={`${getClassname()}`}>Login</h1>
+                <p>who are u?!</p>
+            </div>
+
+            <img className={s.img} src="/img/tea.gif" alt="" />
+
             <input
                 ref={inputRef}
                 type="text"
                 placeholder="tutututu"
                 onKeyDown={onKeyDown}
             />
+
             {displayError()}
         </div>
     );

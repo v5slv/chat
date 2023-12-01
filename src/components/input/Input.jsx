@@ -42,6 +42,7 @@ const Input = ({ selectedUser, setSelectedUser }) => {
             ref={inputRef}
             className={s.input}
             type="text"
+            placeholder="hi :D"
             onKeyDown={onKeyDown}
         />
     );

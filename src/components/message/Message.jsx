@@ -17,7 +17,8 @@ const Message = ({ content, username, fromSelf }) => {
             ref={messageRef}
             className={`${s.message} ${fromSelf ? s.message__self : ""}`}
         >
-            {username} : {content}
+            <div className={s.message__username}>{username}</div>
+            <div className={s.message__content}>{content}</div>
         </div>
     );
 };

@@ -1,0 +1,40 @@
+// variables
+$blue: #68c5ba;
+$beige: #eeeadd;
+$black: #30312c;
+$orange: #df5614;
+$white: #f7f7f7;
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shrikhand&display=swap");
+
+// mixins
+@mixin flex($dir: row, $gap: null, $jc: center, $ai: center) {
+    display: flex;
+    @if $jc {
+        justify-content: $jc;
+    }
+    @if $ai {
+        align-items: $ai;
+    }
+    @if $dir {
+        flex-direction: $dir;
+    }
+    @if $gap {
+        gap: $gap;
+    }
+}
+
+@mixin border($radius: 0.5em, $thickness: null) {
+    border: 2px solid $black;
+    @if $radius {
+        border-radius: $radius;
+    }
+    @if $thickness {
+        border-width: $thickness;
+    }
+}
+
+@mixin shadow($x: 1em, $y: 0.8em) {
+    box-shadow: $x $y 0px $black;
+}

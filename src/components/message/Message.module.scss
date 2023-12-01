@@ -1,8 +1,27 @@
+@import "../../styles/utils.scss";
+
 .message {
     transform: translateX(-100px);
     opacity: 0;
+    @include flex(column, 0, center, flex-start);
+    width: fit-content;
     &__self {
-        text-align: right;
+        @include flex(column, 0, center, flex-end);
         transform: translateX(100px);
+        align-self: flex-end;
     }
+}
+
+.message__username {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.message__content {
+    background-color: $white;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    border: 1px solid $black;
+    margin-top: 0.25em;
+    font-size: 1em;
 }

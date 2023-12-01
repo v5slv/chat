@@ -1,14 +1,30 @@
-.page {
-    display: flex;
-    gap: 2em;
-    width: 80vw;
+@import "utils.scss";
 
-    .chat {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        width: 100%;
-    }
+.page {
+    @include flex(column);
+    @include border(1.5em);
+    @include shadow;
+    width: 80vw;
+    background-color: $beige;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    height: 100%;
+}
+
+.left {
+    @include flex(column, 0, space-between, flex-start);
+    border-right: 2px solid $black;
+    padding: 1.8rem;
+}
+
+.right {
+    @include flex(column, 1em, space-between, flex-start);
+    width: 100%;
+    padding: 1.8rem;
 }
 
 .messages {
@@ -16,12 +32,24 @@
     flex-direction: column;
     height: 60vh;
     overflow: hidden;
-}
-
-.title {
-    text-transform: uppercase;
+    width: 100%;
+    gap: 0.8em;
+    padding: 2em 3% 1em 3%;
 }
 
 .error {
     color: rgb(155, 7, 7);
+}
+
+.gif {
+    width: 100%;
+    @include border;
+    @include shadow(0.2em, 0.16em);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid $black;
+    padding: 0.3em 0.2em 0.2em 0.2em;
 }

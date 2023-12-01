@@ -1,22 +1,16 @@
+@import "../../styles/utils.scss";
+
 .userlist {
-    background-color: white;
-    border: 2px solid black;
-    box-shadow: 0.25em 0.25em black;
     color: color-mix(in oklab, transparent 30%, black);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 1.5em;
-    padding: 1rem;
+    font-size: 1.25em;
     height: fit-content;
-
-    .notif {
-        height: 1em;
-        width: 1em;
-        background-color: red;
-    }
 
     .general {
         cursor: pointer;
+        font-weight: 700;
+        color: $black;
     }
 }

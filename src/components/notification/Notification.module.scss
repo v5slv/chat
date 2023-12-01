@@ -1,14 +1,19 @@
+@import "../../styles/utils.scss";
+
 .notification {
-    background-color: rgb(148, 205, 255);
+    background-color: $black;
+    color: $white;
     position: fixed;
     top: 0;
     right: 0;
     padding: 1em;
+    border-bottom-left-radius: 0.5em;
 
     .close {
         width: 12px;
         height: 12px;
-        background-color: black;
+        background-color: $orange;
+        color: $white;
         cursor: pointer;
         position: absolute;
         top: 0;

@@ -203,47 +203,53 @@ const Home = () => {
 
     return (
         <div className={s.page}>
-            <Userlist
-                users={users}
-                setUsers={setUsers}
-                selectedUser={selectedUser}
-                setSelectedUser={setSelectedUser}
-            />
-
-            {error && (
-                <Notification
-                    title={error.title}
-                    content={error.content}
-                    onClose={() => setError(null)}
-                />
-            )}
-
-            <div className={s.chat}>
-                <div className={s.messages} ref={viewerRef}>
-                    {selectedUser
-                        ? selectedUser.messages.map((message, key) => (
-                              <Message
-                                  key={key}
-                                  username={message.username}
-                                  content={message.content}
-                                  fromSelf={message.from === socket.userID}
-                              />
-                          ))
-                        : messages.map((message, key) => (
-                              <Message
-                                  key={key}
-                                  username={message.username}
-                                  content={message.content}
-                                  fromSelf={message.from === socket.userID}
-                              />
-                          ))}
+            <h1 className={s.title}>the little chat</h1>
+            <div className={s.content}>
+                <div className={s.left}>
+                    <Userlist
+                        users={users}
+                        setUsers={setUsers}
+                        selectedUser={selectedUser}
+                        setSelectedUser={setSelectedUser}
+                    />
+                    <img src="/img/tel.gif" alt="" className={s.gif} />
                 </div>
 
-                <Input
-                    selectedUser={selectedUser}
-                    setSelectedUser={setSelectedUser}
-                />
-                <Commands />
+                {error && (
+                    <Notification
+                        title={error.title}
+                        content={error.content}
+                        onClose={() => setError(null)}
+                    />
+                )}
+
+                <div className={s.right}>
+                    <div className={s.messages} ref={viewerRef}>
+                        {selectedUser
+                            ? selectedUser.messages.map((message, key) => (
+                                  <Message
+                                      key={key}
+                                      username={message.username}
+                                      content={message.content}
+                                      fromSelf={message.from === socket.userID}
+                                  />
+                              ))
+                            : messages.map((message, key) => (
+                                  <Message
+                                      key={key}
+                                      username={message.username}
+                                      content={message.content}
+                                      fromSelf={message.from === socket.userID}
+                                  />
+                              ))}
+                    </div>
+
+                    <Input
+                        selectedUser={selectedUser}
+                        setSelectedUser={setSelectedUser}
+                    />
+                    <Commands />
+                </div>
             </div>
         </div>
     );

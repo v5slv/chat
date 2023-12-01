@@ -27,7 +27,7 @@ const User = ({ user, selectedUser, setSelectedUser, resetNotification }) => {
             <span>{user.username}</span>
 
             {user.hasNewMessages === true ? (
-                <div className={s.notif}></div>
+                <div className={s.notif}>!</div>
             ) : null}
         </div>
     );
