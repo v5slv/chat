@@ -2,7 +2,7 @@
 
 ## Petit texte d'intention
 
-C'est un chat à l'allure simple et retro. Je me suis inspirée des dessins animés/BD des années 90 et 00.
+Ce projet est un chat à l'allure simple et retro. Je me suis inspirée des dessins animés/BD des années 90 et 00.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
